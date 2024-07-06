@@ -18,7 +18,7 @@ cloudinary.config({
 })
 const app = express()
 const PORT = process.env.PORT || 6000
-app.use(express.json())
+ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser());
 app.use("/api/auth", authRoutes)
