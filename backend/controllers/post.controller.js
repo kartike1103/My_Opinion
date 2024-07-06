@@ -24,15 +24,27 @@ export const createPost = async (req, res) => {
 			img = uploadedResponse.secure_url;
 		}
 		if(text){
-			const flag=await fetch("https://localhost:5000", {
+			// const flag=await fetch("http://127.0.0.1:5000/predict", {
+			// 	method: 'POST', // Specify the request method as POST
+			// 	headers: {
+			// 		'Content-Type': 'application/json' // Specify the content type as JSON
+			// 	},
+			// 	body: JSON.stringify(text) // Convert the data object to a JSON string
+			// })
+			// if(flag.data==="True"){
+			// 	return res.status(203).json({message:"Offensive or Hate Speech Used Kindly refrain and post again"})
+			// }
+			const response = await fetch("http://127.0.0.1:5000/predict", {
 				method: 'POST', // Specify the request method as POST
 				headers: {
 					'Content-Type': 'application/json' // Specify the content type as JSON
 				},
-				body: JSON.stringify(text) // Convert the data object to a JSON string
-			})
-			if(flag.data==="True"){
-				return res.status(203).json({message:"Offensive or Hate Speech Used Kindly refrain and post again"})
+				body: JSON.stringify({ message: text }) // Convert the data object to a JSON string
+			});
+			const data = await response.json();
+			console.log(data)
+			if(data.prediction==="True"){
+				return res.status(505).json({error:"Offensive or Hate Speech Used Kindly refrain and post again"})
 			}
 		}
 		const newPost = new Post({
@@ -90,15 +102,25 @@ export const commentOnPost = async (req, res) => {
 		}
 		const comment = { user: userId, text };
 		if(text){
-			const flag=await fetch("https://localhost:5000", {
+			// const flag=await fetch("http://127.0.0.1:5000/predict", {
+			// 	method: 'POST', // Specify the request method as POST
+			// 	headers: {
+			// 		'Content-Type': 'application/json' // Specify the content type as JSON
+			// 	},
+				
+			// 	body: JSON.stringify(text) // Convert the data object to a JSON string
+			// })
+			const response = await fetch("http://127.0.0.1:5000/predict", {
 				method: 'POST', // Specify the request method as POST
 				headers: {
 					'Content-Type': 'application/json' // Specify the content type as JSON
 				},
-				body: JSON.stringify(text) // Convert the data object to a JSON string
-			})
-			if(flag.data==="True"){
-				return res.status(209).json({message:"Offensive or Hate Speech Used Kindly refrain and post again"})
+				body: JSON.stringify({ message: text }) // Convert the data object to a JSON string
+			});
+			const data = await response.json();
+			console.log(data)
+			if(data.prediction==="True"){
+				return res.status(505).json({error:"Offensive or Hate Speech Used Kindly refrain and post again"})
 			}
 		}
 		post.comments.push(comment);

@@ -11,10 +11,6 @@ export default defineConfig({
 				target: "http://localhost:7000",
 				changeOrigin: true,
 			},
-			"/api/ml":{
-				target:"https://localhost:5000",
-				changeOrigin:true,
-			}
 		},
 
 	},

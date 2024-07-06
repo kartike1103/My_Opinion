@@ -43,6 +43,25 @@ const CreatePost = () => {
 			setImg(null);
 			toast.success("Post created successfully");
 			queryClient.invalidateQueries({ queryKey: ["posts"] });
+			
+			// if (statusCode === 203) {
+			// 	setText("");
+			// 	setImg(null);
+			// 	toast.success("Post created successfully with status 203");
+			// 	queryClient.invalidateQueries({ queryKey: ["posts"] });
+			// } 
+			// const statusCode = response.status;
+			// if (statusCode === 209) {
+			// 	setText("");
+			// 	setImg(null);
+			// 	toast.success("Offensive or Hate Speech Used Kindly refrain from posting such content");
+			// 	queryClient.invalidateQueries({ queryKey: ["posts"] });
+			// } else {
+			// 	setText("");
+			// 	setImg(null);
+			// 	toast.success("Post created successfully with other status");
+			// 	queryClient.invalidateQueries({ queryKey: ["posts"] });
+			// }
 		},
 	});
 

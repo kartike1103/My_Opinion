@@ -94,6 +94,23 @@ const Post = ({ post }) => {
 				throw new Error(error);
 			}
 		},
+		// onSuccess: () => {
+		// 	toast.success("Comment posted successfully");
+		// 	setComment("");
+		// 	queryClient.invalidateQueries({ queryKey: ["posts"] });
+		// 	// const statusCode = response.status;
+		// 	// if (statusCode === 209) {
+		// 	// 	// setText("");
+		// 	// 	// setImg(null);
+		// 	// 	toast.success("Offensive or Hate Speech Used Kindly refrain from posting such content");
+		// 	// 	queryClient.invalidateQueries({ queryKey: ["posts"] });
+		// 	// } else {
+		// 		// setText("");
+		// 	// 	// setImg(null);
+		// 	// 	toast.success("Post created successfully with other status");
+		// 	// 	queryClient.invalidateQueries({ queryKey: ["posts"] });
+		// 	// }
+		// },
 		onSuccess: () => {
 			toast.success("Comment posted successfully");
 			setComment("");

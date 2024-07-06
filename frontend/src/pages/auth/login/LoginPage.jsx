@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
 import XSvg from "../../../components/svgs/X";
 
 import { MdOutlineMail } from "react-icons/md";
@@ -56,15 +55,16 @@ const LoginPage = () => {
 	};
 
 	return (
-		<div className='max-w-screen-xl mx-auto flex h-screen'>
-			<div className='flex-1 hidden lg:flex items-center  justify-center px-6'>
-				<XSvg className='lg:w-2/3 fill-white px-5' />
+		<div className='max-w-screen-xl mx-auto flex h-screen px-10'>
+			<div className='flex-1 hidden lg:flex items-center  justify-center'>
+				<XSvg className='lg:w-2/3 fill-white' />
 			</div>
 			<div className='flex-1 flex flex-col justify-center items-center'>
 				<form className='flex gap-4 flex-col' onSubmit={handleSubmit}>
-					<div className='w-24 lg:hidden fill-white'>
-					<XSvg  />
-					</div>
+				{ <div className='lg:hidden fill-white' >
+					<XSvg />
+				</div>
+				 }
 					
 					<h1 className='text-4xl font-extrabold text-white'>{"Let's"} go.</h1>
 					<label className='input input-bordered rounded flex items-center gap-2'>
