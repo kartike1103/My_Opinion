@@ -8,17 +8,32 @@ export const createPost = async (req, res) => {
 		const { text } = req.body;
 		let { img } = req.body;
 		const userId = req.user._id.toString();
-
+		
+	
 		const user = await User.findById(userId);
+		
 		if (!user) return res.status(404).json({ message: "User not found" });
+		
 
 		if (!text && !img) {
 			return res.status(400).json({ error: "Post must have text or image" });
 		}
-
+		
 		if (img) {
 			const uploadedResponse = await cloudinary.uploader.upload(img);
 			img = uploadedResponse.secure_url;
+		}
+		if(text){
+			const flag=await fetch("https://localhost:5000", {
+				method: 'POST', // Specify the request method as POST
+				headers: {
+					'Content-Type': 'application/json' // Specify the content type as JSON
+				},
+				body: JSON.stringify(text) // Convert the data object to a JSON string
+			})
+			if(flag.data==="True"){
+				return res.status(203).json({message:"Offensive or Hate Speech Used Kindly refrain and post again"})
+			}
 		}
 		const newPost = new Post({
 			user: userId,
@@ -73,9 +88,19 @@ export const commentOnPost = async (req, res) => {
 		if (!post) {
 			return res.status(404).json({ error: "Post not found" });
 		}
-
 		const comment = { user: userId, text };
-
+		if(text){
+			const flag=await fetch("https://localhost:5000", {
+				method: 'POST', // Specify the request method as POST
+				headers: {
+					'Content-Type': 'application/json' // Specify the content type as JSON
+				},
+				body: JSON.stringify(text) // Convert the data object to a JSON string
+			})
+			if(flag.data==="True"){
+				return res.status(209).json({message:"Offensive or Hate Speech Used Kindly refrain and post again"})
+			}
+		}
 		post.comments.push(comment);
 		await post.save();
 
