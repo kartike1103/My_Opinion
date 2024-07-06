@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template , jsonify
 import joblib
 
 app = Flask(__name__)
@@ -17,7 +17,7 @@ def predict():
         message = request.form['message']
         data = vectorizer.transform([message]).toarray()
         prediction = model.predict(data)
-        return render_template('result.html', prediction=prediction[0])
+        return jsonify({'prediction': str(prediction[0])})
 
 if __name__ == '__main__':
     app.run(debug=True)
