@@ -20,13 +20,11 @@ export const createPost = async (req, res) => {
 			const uploadedResponse = await cloudinary.uploader.upload(img);
 			img = uploadedResponse.secure_url;
 		}
-
 		const newPost = new Post({
 			user: userId,
 			text,
 			img,
 		});
-
 		await newPost.save();
 		res.status(201).json(newPost);
 	} catch (error) {
@@ -120,7 +118,7 @@ export const likeUnlikePost = async (req, res) => {
 				type: "like",
 			});
 			await notification.save();
-			res.status(200).json({message :"Post liked successfully"});
+			// res.status(200).json({message :"Post liked successfully"});
 			const updatedLikes = post.likes;
 			res.status(200).json(updatedLikes);
 		}

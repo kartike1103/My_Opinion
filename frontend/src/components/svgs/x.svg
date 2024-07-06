@@ -1,0 +1,54 @@
+<svg width="172px" height="172px" viewBox="-8.64 -8.64 65.28 65.28" id="b" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" stroke="#FFFFFF" strokeWidth="1.824" transform="rotate(0)">
+		  <g id="SVGRepo_bgCarrier" strokeWidth="0" transform="translate(1.44, 1.44), scale(0.94)">
+			<rect x="-8.64" y="-8.64" width="65.28" height="65.28" rx="32.64" fill="#8C00F0" strokeWidth="0"></rect>
+		  </g>
+		  <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" stroke="#6427be" strokeWidth="2.208">
+			<defs>
+			  <style>
+				{`
+				  .d { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+				  .text { font-size: 10px; fill: white; text-anchor: middle; dominant-baseline: middle; }
+				`}
+			  </style>
+			</defs>
+			<path className="d" d="M24,2.5C12.1259,2.5,2.5,12.1259,2.5,24c0,5.4902,2.0752,10.4837,5.4617,14.2834-0.971,2.8007-2.9933,3.6747-5.4617,4.5671,2.2605,2.1812,6.6677,2.7591,10.6226-0.3278,3.1938,1.8799,6.9033,2.9773,10.8774,2.9773,11.8741,0,21.5-9.6259,21.5-21.5S35.8741,2.5,24,2.5Z"></path>
+			<g>
+			  <rect className="d" x="31.6398" y="19.8877" width="5.8181" height="7.709" rx="2.909" ry="2.909"></rect>
+			  <g>
+				<path className="d" d="M16.9179,22.7967c0-1.6066,1.3024-2.909,2.909-2.909h0c1.6066,0,2.909,1.3024,2.909,2.909v4.7999"></path>
+				<line className="d" x1="16.9179" y1="19.8877" x2="16.9179" y2="27.5967"></line>
+				<path className="d" d="M22.736,22.7967c0-1.6066,1.3024-2.909,2.909-2.909h0c1.6066,0,2.909,1.3024,2.909,2.909v4.7999"></path>
+			  </g>
+			  <g>
+				<circle fill="none" cx="13.5602" cy="17.1792" r="0.75"></circle>
+				<line className="d" x1="13.5602" y1="19.8877" x2="13.5602" y2="27.5967"></line>
+			  </g>
+			</g>
+		  </g>
+		  <g id="SVGRepo_iconCarrier">
+			<defs>
+			  <style>
+				{`
+				  .d { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+				  .text { font-size: 10px; fill: white; text-anchor: middle; dominant-baseline: middle; }
+				`}
+			  </style>
+			</defs>
+			<path className="d" d="M24,2.5C12.1259,2.5,2.5,12.1259,2.5,24c0,5.4902,2.0752,10.4837,5.4617,14.2834-0.971,2.8007-2.9933,3.6747-5.4617,4.5671,2.2605,2.1812,6.6677,2.7591,10.6226-0.3278,3.1938,1.8799,6.9033,2.9773,10.8774,2.9773,11.8741,0,21.5-9.6259,21.5-21.5S35.8741,2.5,24,2.5Z"></path>
+			<g>
+			  <rect className="d" x="31.6398" y="19.8877" width="5.8181" height="7.709" rx="2.909" ry="2.909"></rect>
+			  <g>
+				<path className="d" d="M16.9179,22.7967c0-1.6066,1.3024-2.909,2.909-2.909h0c1.6066,0,2.909,1.3024,2.909,2.909v4.7999"></path>
+				<line className="d" x1="16.9179" y1="19.8877" x2="16.9179" y2="27.5967"></line>
+				<path className="d" d="M22.736,22.7967c0-1.6066,1.3024-2.909,2.909-2.909h0c1.6066,0,2.909,1.3024,2.909,2.909v4.7999"></path>
+			  </g>
+			  <g>
+				<circle fill="none" cx="13.5602" cy="17.1792" r="0.75"></circle>
+				<line className="d" x1="13.5602" y1="19.8877" x2="13.5602" y2="27.5967"></line>
+			  </g>
+			</g>
+		  </g>
+		  {/* <text x="13.5602" y="17.1792" className="text">imo</text> */}
+		</svg>
+	  
+	  
